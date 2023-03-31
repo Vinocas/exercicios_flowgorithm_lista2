@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 10:21:30 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjA5OjUyOjEzICI7Mjk2Nw=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjEwOjIxOjMwICI7MTszMDYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="10.&#9;Dado o valor do sal&#225;rio de um empregado, calcular e exibir o valor pago ao Imposto de Renda, considerando:&#13;&#10;&#13;&#10;Sal&#225;rio em R$&#9;Valor do Imposto&#13;&#10;Sal&#225;rio &lt;  100&#9;Isento&#13;&#10;100 &#8804; Sal&#225;rio &lt; 500&#9;10%&#13;&#10;500 &#8804; Sal&#225;rio &lt; 2000&#9;18%&#13;&#10;Sal&#225;rio &#8805; 2000&#9;25%&#13;&#10;&#13;&#10;"/>
+            <declare name="salario" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o valor do sal&#225;rio a ser calculado:&quot;" newline="True"/>
+            <input variable="salario"/>
+            <if expression="salario&lt;100">
+                <then>
+                    <output expression="&quot;O sal&#225;rio inserido &#233; isento de imposto!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="salario&gt;=100&amp;&amp;salario&lt;500">
+                        <then>
+                            <output expression="&quot;O empregado deve 10% do sal&#225;rio. Sendo assim, o valor do imposto &#233;: R$&quot; &amp; salario*0.1" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="salario&gt;=500&amp;&amp;salario&lt;2000">
+                                <then>
+                                    <output expression="&quot;O empregado deve 18% do sal&#225;rio. Sendo assim, o valor do imposto &#233;: R$&quot; &amp; salario*0.18" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="salario&gt;=2000">
+                                        <then>
+                                            <output expression="&quot;O empregado deve 25% do sal&#225;rio. Sendo assim, o valor do imposto &#233;: R$&quot; &amp; salario*0.25" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

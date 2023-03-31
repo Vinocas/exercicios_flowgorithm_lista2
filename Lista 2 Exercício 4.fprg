@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-21 12:52:22 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjEyOjQ0OjU3ICI7Mjk2OA=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjEyOjUyOjIyICI7MTszMDY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="4.&#9;Divis&#227;o: Ler dois n&#250;meros e efetuar uma divis&#227;o, mas somente se o divisor for diferente de zero; quando isto ocorrer, &#233; mostrada uma mensagem de erro apropriada."/>
+            <declare name="dividendo, divisor" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira um n&#250;mero dividendo:&quot;" newline="True"/>
+            <input variable="dividendo"/>
+            <output expression="&quot;Insira um n&#250;mero divisor diferente de 0:&quot;" newline="True"/>
+            <input variable="divisor"/>
+            <while expression="divisor=0">
+                <output expression="&quot;O n&#250;mero divisor n&#227;o pode ser igual a 0.&quot;" newline="True"/>
+                <output expression="&quot;Insira um n&#250;mero divisor diferente de 0 novamente:&quot;" newline="True"/>
+                <input variable="divisor"/>
+            </while>
+            <output expression="&quot;O resultado da divis&#227;o &#233;: &quot; &amp; (dividendo/divisor) &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

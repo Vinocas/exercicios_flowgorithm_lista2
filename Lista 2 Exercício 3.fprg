@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-21 12:44:44 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjExOjU3OjA4ICI7Mjk2Nw=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjEyOjQ0OjQ0ICI7MzszMDc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="3.&#9;Maior entre tr&#234;s n&#250;meros: Ler tr&#234;s n&#250;meros diferentes e mostrar na tela uma mensagem indicando qual &#233; o maior."/>
+            <declare name="n1, n2, n3" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o primeiro n&#250;mero:&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Insira o segundo n&#250;mero:&quot;" newline="True"/>
+            <input variable="n2"/>
+            <output expression="&quot;Insira o terceiro n&#250;mero:&quot;" newline="True"/>
+            <input variable="n3"/>
+            <if expression="(n1&gt;n2) &amp;&amp; (n1&gt;n3)">
+                <then>
+                    <output expression="&quot;O maior n&#250;mero inserido foi: &quot; &amp; n1 &amp; &quot;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(n2&gt;n1) &amp;&amp; (n2&gt;n3)">
+                        <then>
+                            <output expression="&quot;O maior n&#250;mero inserido foi: &quot; &amp; n2 &amp; &quot;.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="(n3&gt;n1) &amp;&amp; (n3&gt;n2)">
+                                <then>
+                                    <output expression="&quot;O maior n&#250;mero inserido foi: &quot; &amp; n3 &amp; &quot;.&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

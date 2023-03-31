@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 08:24:12 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjEyOjUzOjQ1ICI7Mjk2Nw=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjA4OjI0OjEyICI7ODszMDc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="7.&#9;Ano bissexto - Um ano &#233; bissexto se for divis&#237;vel por 4 exceto os s&#233;culos, que s&#227;o bissextos se forem m&#250;ltiplos de 400. Escreva um programa que determina se um ano &#233; bissexto."/>
+            <declare name="ano" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira um ano:&quot;" newline="True"/>
+            <input variable="ano"/>
+            <if expression="ano mod 4 = 0">
+                <then>
+                    <if expression="ano mod 100 = 0">
+                        <then>
+                            <if expression="ano mod 400 = 0">
+                                <then>
+                                    <output expression="ano &amp; &quot; &#233; um ano bissexto!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="ano &amp; &quot; n&#227;o &#233; um ano bissexto!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="ano &amp; &quot; &#233; um ano bissexto!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="ano &amp; &quot; n&#227;o &#233; um ano bissexto!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 09:44:06 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjEyOjUyOjM5ICI7Mjk2Nw=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjI7IjA5OjQ0OjA2ICI7MjszMDc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="5.&#9;Equa&#231;&#227;o do segundo grau - Ler os coeficientes a, b e c de uma equa&#231;&#227;o de segundo grau e, antes de calcular as ra&#237;zes, calcular o valor de delta. Se este for negativo, informar que a equa&#231;&#227;o n&#227;o tem solu&#231;&#227;o real. Se for zero, mostrar a &#250;nica raiz. Se positivo, mostra as duas ra&#237;zes."/>
+            <declare name="a, b, c, delta" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o valor de 'a':&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Insira o valor de 'b':&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Insira o valor de 'c':&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="delta" expression="b^2-4*a*c"/>
+            <if expression="delta&lt;0">
+                <then>
+                    <output expression="&quot;O valor de '&#916;' &#233;: &quot; &amp; delta &amp; &quot;. Logo, n&#227;o tem solu&#231;&#227;o real.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="delta=0">
+                        <then>
+                            <output expression="&quot;O valor de '&#916;' &#233;: &quot; &amp; delta &amp; &quot;. Logo, apresenta apenas uma raiz.&quot;" newline="True"/>
+                            <output expression="&quot;O valor de x &#233;: &quot; &amp; -b/2*a &amp; &quot;.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;O valor de '&#916;' &#233;: &quot; &amp; delta &amp; &quot;. Logo, apresenta duas raizes.&quot;" newline="True"/>
+                            <output expression="&quot;O valor de x' &#233;: &quot; &amp; (-b+sqrt(delta))/2*a &amp; &quot;.&quot;" newline="True"/>
+                            <output expression="&quot;O valor de x'' &#233;: &quot; &amp; (-b-sqrt(delta))/2*a &amp; &quot;.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

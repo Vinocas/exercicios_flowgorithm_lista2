@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-21 11:56:50 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjExOjQwOjM2ICI7Mjk2MA=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjExOjU2OjUwICI7MTszMDcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="1.&#9;Construa um aplicativo que verifique e mostre ao usu&#225;rio  qual combust&#237;vel compensa utilizar em um autom&#243;vel &#8220;flex&#8221;. Sabe-se que a rela&#231;&#227;o entre o pre&#231;o do  &#225;lcool e o pre&#231;o da gasolina &#233; 0,7."/>
+            <declare name="precoGas, precoAlc, relAlcGas" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o pre&#231;o do &#225;lcool:&quot;" newline="True"/>
+            <input variable="precoAlc"/>
+            <output expression="&quot;Insira o pre&#231;o da gasolina:&quot;" newline="True"/>
+            <input variable="precoGas"/>
+            <assign variable="relAlcGas" expression="precoAlc/precoGas"/>
+            <if expression="relAlcGas&lt;=0.7">
+                <then>
+                    <output expression="&quot;A rela&#231;&#227;o &#233; menor ou igual a 0.7. Abaste&#231;a com &#225;lcool!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;A rela&#231;&#227;o &#233; maior que 0.7. Abaste&#231;a com gasolina!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

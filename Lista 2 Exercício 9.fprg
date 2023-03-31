@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 08:15:22 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDMtMDc7IjA3OjU3OjM4ICI7Mjk4MA=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDMtMDc7IjA4OjE1OjIyICI7MTszMDc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="9.&#9;Suponha que um caixa disponha apenas de notas de 1, 10 e 20 reais.&#13;&#10;Considerando que algu&#233;m est&#225; pagando uma compra, escreva um algoritmo que mostre o n&#250;mero m&#237;nimo de notas que o caixa deve fornecer como troco. Mostre tamb&#233;m: o valor da compra, o valor do troco e a quantidade de cada tipo de nota do troco. Suponha que o sistema monet&#225;rio n&#227;o utilize moedas.&#13;&#10;"/>
+            <declare name="compra, pagamento, troco, nota1, nota10, nota20" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o valor da compra:&quot;" newline="True"/>
+            <input variable="compra"/>
+            <output expression="&quot;Digite o valor pago:&quot;" newline="True"/>
+            <input variable="pagamento"/>
+            <assign variable="troco" expression="pagamento - compra"/>
+            <assign variable="nota20" expression="troco/20"/>
+            <output expression="&quot;Quantidade de notas de R$20 :&quot; &amp; nota20" newline="True"/>
+            <assign variable="troco" expression="troco mod 20"/>
+            <assign variable="nota10" expression="troco / 10"/>
+            <output expression="&quot;Quantidade de notas de R$10 :&quot; &amp; nota10" newline="True"/>
+            <assign variable="troco" expression="troco mod 10"/>
+            <assign variable="nota1" expression="troco/1"/>
+            <output expression="&quot;Quantidade de notas de R$1: &quot; &amp; nota1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

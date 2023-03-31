@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-21 12:05:42 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjExOjU3OjA4ICI7Mjk2Nw=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjE7IjEyOjA1OjQyICI7MjszMDY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="2.&#9;Maior entre dois n&#250;meros: Ler dois n&#250;meros inteiros, quaisquer e mostrar na tela uma mensagem indicando qual &#233; o maior, ou se s&#227;o iguais."/>
+            <declare name="n1, n2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Insira o primeiro n&#250;mero inteiro:&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Insira o segundo n&#250;mero inteiro:&quot;" newline="True"/>
+            <input variable="n2"/>
+            <if expression="n1=n2">
+                <then>
+                    <output expression="&quot;Os n&#250;meros inteiros inseridos s&#227;o iguais!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="n1&gt;n2">
+                        <then>
+                            <output expression="&quot;O maior n&#250;mero inteiro &#233;: &quot; &amp; n1 &amp; &quot;.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;O maior n&#250;mero inteiro &#233;: &quot; &amp; n2 &amp; &quot;.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

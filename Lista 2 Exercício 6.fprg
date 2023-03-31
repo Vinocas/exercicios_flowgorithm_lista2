@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 10:38:52 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjI7IjA5OjQ0OjA3ICI7Mjk3MA=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjEwOjM4OjUyICI7MzszMDc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="6.&#9;Tri&#226;ngulo: Dados 3 valores inteiros A, B e C, digitados pelo usu&#225;rio, verificar se representam um tri&#226;ngulo. Lembre-se que, se A, B e C s&#227;o lados de um tri&#226;ngulo se e somente se, as medidas dos lados atendem &#224; seguinte express&#227;o: (A&lt;B+C) e (C&lt;A+B) e (B&lt;A+C).&#13;&#10;Em caso positivo, &#13;&#10;&#8226;&#9;exibir sua classifica&#231;&#227;o quanto aos lados (eq&#252;il&#225;tero, is&#243;sceles ou escaleno) e seu per&#237;metro.&#13;&#10;&#8226;&#9;Calcular e exibir seu per&#237;metro.&#13;&#10;&#8226;&#9;Calcular e exibir sua &#225;rea.&#13;&#10;Lembre-se que para calcular a &#225;rea do tri&#226;ngulo, use a f&#243;rmula de Her&#227;o:   Area=sqrt(sp*(sp-A)*(sp-B)*(sp-C))  onde sp=(A+B+C)/2&#13;&#10;"/>
+            <declare name="a, b, c, perimetro" type="Integer" array="False" size=""/>
+            <declare name="area, sp" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira o primeiro lado:&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Insira o segundo lado:&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Insira o terceiro lado:&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="perimetro" expression="a+b+c"/>
+            <assign variable="sp" expression="(a+b+c)/2"/>
+            <assign variable="area" expression="sqrt(sp*(sp-a)*(sp-b)*(sp-c))"/>
+            <if expression="a&lt;b+c &amp;&amp; c&lt;a+b &amp;&amp; b&lt;a+c">
+                <then>
+                    <output expression="&quot;Os valores inseridos correspondem aos 3 lados de um tri&#226;ngulo!&quot;" newline="True"/>
+                    <if expression="a==b&amp;&amp;b==c&amp;&amp;a==c">
+                        <then>
+                            <output expression="&quot;E se trata de um tri&#226;ngulo equil&#225;tero.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="a!=b&amp;&amp;b!=c&amp;&amp;a!=c">
+                                <then>
+                                    <output expression="&quot;E se trata de um tri&#226;ngulo escaleno.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;E se trata de um tri&#226;ngulo is&#243;sceles.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;O perimetro do tri&#226;ngulo &#233;: &quot; &amp; perimetro &amp; &quot;.&quot;" newline="True"/>
+                    <output expression="&quot;A &#225;rea do tri&#226;ngulo &#233;: &quot; &amp; area &amp; &quot;.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Os valores inseridos n&#227;o correspondem aos 3 lados de um tri&#226;ngulo!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

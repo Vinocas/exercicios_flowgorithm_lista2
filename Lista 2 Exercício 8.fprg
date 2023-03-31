@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Usu&#225;rio"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 09:13:18 "/>
+        <attribute name="created" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDItMjM7IjA4OjI0OjE0ICI7Mjk2Ng=="/>
+        <attribute name="edited" value="VXN1w6FyaW87VklOSUNJVVNERUxMOzIwMjItMDMtMDc7IjA5OjEzOjE4ICI7NDszMDgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="8.&#9;Tri&#226;ngulo no plano cartesiano: Dados as coordenadas x e y, digitados pelo usu&#225;rio, de cada um dos 3 v&#233;rtices de um tri&#226;ngulo qualquer, no plano cartesiano, calcular e exibir:&#13;&#10;1.&#9;Tamanho dos lados A, B e C&#13;&#10;2.&#9;&#193;rea do tri&#226;ngulo&#13;&#10;3.&#9;Per&#237;metro do tri&#226;ngulo.&#13;&#10;&#9;Onde  d=sqrt((x2-x1)^2+(y2-y1)^2)&#13;&#10;"/>
+            <declare name="xA, xB, xC, yA, yB, yC, AB, BC, AC, sp" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a coordenada 'x' do lado A:&quot;" newline="True"/>
+            <input variable="xA"/>
+            <output expression="&quot;Digite a coordenada 'y' do lado A:&quot;" newline="True"/>
+            <input variable="yA"/>
+            <output expression="&quot;Digite a coordenada 'x' do lado B:&quot;" newline="True"/>
+            <input variable="xB"/>
+            <output expression="&quot;Digite a coordenada 'y' do lado B:&quot;" newline="True"/>
+            <input variable="yB"/>
+            <output expression="&quot;Digite a coordenada 'x' do lado C:&quot;" newline="True"/>
+            <input variable="xC"/>
+            <output expression="&quot;Digite a coordenada 'y' do lado C:&quot;" newline="True"/>
+            <input variable="yC"/>
+            <assign variable="AB" expression="sqrt((xB-xA)^2+(yB-yA)^2)"/>
+            <assign variable="BC" expression="sqrt((xB-xC)^2+(yB-yC)^2)"/>
+            <assign variable="AC" expression="sqrt((xA-xC)^2+(yA-yC)^2)"/>
+            <assign variable="sp" expression="(AB+BC+AC)/2"/>
+            <output expression="&quot;Dist&#226;ncia AB = &quot; &amp; AB" newline="True"/>
+            <output expression="&quot;Dist&#226;ncia BC = &quot; &amp; BC" newline="True"/>
+            <output expression="&quot;Dist&#226;ncia AC = &quot; &amp; AC" newline="True"/>
+            <output expression="&quot;A &#225;rea do tri&#226;ngulo &#233; igual: &quot; &amp; sqrt(sp*(sp-AB)*(sp-BC)*(sp-AC))" newline="True"/>
+            <output expression="&quot;O per&#237;metro do tri&#226;ngulo &#233; igual a: &quot; &amp; AB+BC+AC" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
